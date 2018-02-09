@@ -1,0 +1,282 @@
+/*
+ * Overriding style sheet
+ * MAIN PAGES
+ */
+
+body {
+    background-color: black;
+    font-family: 'FontAwesome', sans-serif;
+}
+
+div logo{
+    position: absolute;
+}
+
+div#logo{
+    padding-top: 8px;
+}
+
+div#nav_tabs{
+    font-family: 'FontAwesome', sans-serif;
+    font-size: large;
+}
+
+/*Blotter overview title*/
+div#b_o{
+    font-family: 'FontAwesome', sans-serif;
+    font-size: large;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+/*Pending trades title*/
+div#p_t{
+    font-family: 'FontAwesome', sans-serif;
+    font-size: large;
+}
+
+div#footer{
+    font-family: 'FontAwesome', sans-serif;
+    color: whitesmoke;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    padding-left: 20px;
+}
+
+div#clockbox{
+    font-family: 'FontAwesome', sans-serif;
+    font-size: small;
+    position:absolute;
+    left:80%;
+    bottom:0px;
+    height:30px;
+    width:20%;
+
+}
+
+/*Blotter overview styling*/
+div#gentext{
+    color: white;
+    height: 500px;
+    padding: 10px 10px 10px 10px;
+}
+
+/*Pending trades expanded styling*/
+div#standard{
+    padding: 10px 10px 10px 10px;
+    color: white;
+}
+
+/*Pending trades text styling*/
+div#tb_text{
+    padding-bottom: 10px;
+    color: darkgrey;
+}
+
+div#blotter {
+    padding: 15px 15px 15px 15px;
+    color: white;
+}
+
+div.toggler { cursor:pointer;
+    }
+
+div.toggler div { display:none;
+    background-color: #262626;
+}
+
+div.affirm {
+    padding: 10px 40px;
+    background: lime;
+    width: 100px;
+    border-radius: 25px;
+}
+
+div.reject {
+    padding: 10px 40px;
+    background: red;
+    width: 100px;
+    border-radius: 25px;
+}
+
+button.accept {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background-color: limegreen;
+
+}
+
+button.reject {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background-color: darkred;
+}
+
+button.call {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background-color: darkorange;
+}
+
+a {
+    color: white;
+}
+
+p.accept{
+    color: limegreen;
+}
+
+p.reject{
+    color: red;
+}
+
+.open_div {
+}
+
+.desc_div{
+    background-color: #262626;
+}
+
+.hiddenRow {
+    padding: 0 !important;
+    background-color: #262626;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+
+/*--------------------------------------------------------------
+1.0 - BASE SITE STYLES
+--------------------------------------------------------------*/
+*,*:after,*:before {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+
+body {
+    color: black;
+    font:12px/18px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+}
+a,a:visited {
+    color:#fff
+}
+
+/*--------------------------------------------------------------
+2.0 - SEARCH FORM
+--------------------------------------------------------------*/
+.searchform {
+    background:#f4f4f4;
+    background:rgba(244,244,244,.79);
+    border: 1px solid #d3d3d3;
+    left: 50%;
+    padding: 2px 5px;
+    position: absolute;
+    margin: -22px 0 0 -170px;
+    top: 50%;
+    width:339px;
+    box-shadow:0 4px 9px rgba(0,0,0,.37);
+    -moz-box-shadow:0 4px 9px rgba(0,0,0,.37);
+    -webkit-box-shadow:0 4px 9px rgba(0,0,0,.37);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.searchform input, .searchform button {
+    float: left
+}
+.searchform input {
+    background:white;
+    border: none;
+    font:12px/12px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    margin-right: 5px;
+    padding: 10px;
+    width: 216px;
+    box-shadow: 0 0 4px rgba(0,0,0,.4) inset, 1px 1px 1px rgba(255,255,255,.75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,.4) inset, 1px 1px 1px rgba(255,255,255,.75);
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.4) inset, 1px 1px 1px rgba(255,255,255,.75);
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px
+}
+.searchform input:focus {
+    outline: none;
+    box-shadow:0 0 4px #E68734 inset;
+    -moz-box-shadow:0 0 4px #E68734 inset;
+    -webkit-box-shadow:0 0 4px #E68734 inset;
+}
+.searchform input::-webkit-input-placeholder {
+    font-style: italic;
+    line-height: 15px
+}
+
+.searchform input:-moz-placeholder {
+    font-style: italic;
+    line-height: 15px
+}
+
+.searchform button {
+    background: rgb(236, 152, 69);
+    background: -moz-linear-gradient(top, rgb(236, 152, 69) 0%, rgb(221, 86, 45) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(236, 152, 69)), color-stop(100%, rgb(221, 86, 45)));
+    background: -webkit-linear-gradient(top, rgb(236, 152, 69) 0%, rgb(221, 86, 45) 100%);
+    background: -o-linear-gradient(top, rgb(236, 152, 69) 0%, rgb(221, 86, 45) 100%);
+    background: -ms-linear-gradient(top, rgb(236, 152, 69) 0%, rgb(221, 86, 45) 100%);
+    background: linear-gradient(to bottom, rgb(236, 152, 69) 0%, rgb(221, 86, 45) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34adec', endColorstr='#2691dc',GradientType=0 );
+    border: none;
+    color:#fff;
+    cursor: pointer;
+    font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    padding: 10px;
+    width:106px;
+    box-shadow: 0 0 2px #dd562d inset;
+    -moz-box-shadow: 0 0 2px #dd562d inset;
+    -webkit-box-shadow: 0 0 2px #dd562d inset;
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+}
+.searchform button:hover {
+    opacity:.9;
+}
+
+.table-condensed{
+    background-color: white;
+    color: black;
+}
+
+.table{
+    background-color: #0f0f0f;
+}
+
+input, select, textarea{
+    color: black;
+}
+
+textarea:focus, input:focus {
+    color: black;
+}

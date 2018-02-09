@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="{% static 'PTA/css/auth.css' %}">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+
+<body>
+
+<!-- When the user attempts to login and is successful, they are redirected to this page which displays
+ their name and a welcome message. They are then sent to the trade list page of the website.-->
+
+<table style="width:100%" align="center">
+    <tr>
+        <th></th>
+        <th> <br><br><br><br> <img src="{% static 'PTA/images/trlogofull.png' %}" ></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td></td>
+        <td align="center" style="color: lightgrey">
+            <div class="gentext">
+                <br>
+                <p>
+                <p>
+                    {% if b %}
+                    <br><br>
+                <p style="color: red">Incorrect username or password - please try again. </p>
+                {% endif %}
+            </div>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+
+
+            <div id="welcome">
+
+                {% block content %}
+
+
+            </div>
+
+
+            <div id="welcometext">
+            <h2 align="center">Welcome, {{ user.first_name }} {{ user.last_name }}</h2>
+            </div>
+
+            <div id="buffering">
+                <table width="100%" align="center">
+
+                    <br><br><br>
+
+                    <tr><td width="100px"><img src="{% static 'PTA/images/loading.gif' %}" width="30px" height="30px" padding-left="100px" ></td></tr>
+                </table>
+            </div>
+
+
+                <meta http-equiv="refresh" content="3;url=/trade_list/">
+
+
+                {% endblock %}
+
+
+
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+
+</body>
+</html>

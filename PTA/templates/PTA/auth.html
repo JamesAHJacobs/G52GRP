@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="{% static 'PTA/css/auth.css' %}">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+
+<body>
+
+<!-- The code below generates the layout of the authentication page, this is the page that
+is displayed which allows the user to login. If the users credentials ar correct it will
+ redirect to the next page or return an error massage -->
+
+<table style="width:100%" align="center">
+    <tr>
+        <th></th>
+        <th><br><br><br><br> <img src="{% static 'PTA/images/trlogofull.png' %}"></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td></td>
+        <td align="center" style="color: lightgrey">
+            <div class="gentext">
+                <br>
+                <p>
+                <h3>System Login</h3>
+                <p>Please enter your credentials to log in to the system
+                    {% if b %}
+                    <br><br>
+                <p style="color: red">Incorrect username or password - please try again. </p>
+                {% endif %}
+            </div>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <!--login form-->
+            <!-- this login form just takes a user input and django checks it against the database -->
+
+            <div id="login">
+
+                {% block content %}
+
+                <form action="/accounts/auth/" method="post">{% csrf_token %}
+                    <span class="fontawesome-user"></span>
+                    <input type="text" name="username" placeholder="Enter username" id="username">
+                    <span class="fontawesome-lock"></span>
+                    <input type="password" name="password" placeholder="Enter Password" id="password">
+
+                    <input type="submit" value="login"/>
+
+                </form>
+                {% endblock %}
+
+
+            </div>
+
+            <!--end of login form-->
+
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
